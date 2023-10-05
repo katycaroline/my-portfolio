@@ -23,3 +23,8 @@ image5 = https://wallpapercave.com/w/uwp1837483
 ## License
 
 MIT License
+
+## Deployment
+
+![Screenshot of the deployed "my-portfolio"](image.png)
+Link to deployed website: https://katycaroline.github.io/my-portfolio/
