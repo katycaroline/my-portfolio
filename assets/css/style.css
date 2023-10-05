@@ -1,11 +1,17 @@
+
+/* body: Setting base styling for the whole webpage. */
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     min-height: 100vh;
+    min-width: 100vw;
     background-color:  rgba(193, 223, 252, 0.9);
 }
+
+/* .main-header: Setting styling for the main-header class, containing text in a header and adding a background image. */
 
 .main-header {
     height: 500px;
@@ -16,7 +22,7 @@ body{
     align-items: flex-start;
     font-size: 45px;
     background-image: url("../images/header1.jpg");
-    background-size: 100%;
+    background-size: cover;
     background-position: center;
     border-style: inset;
     border-color: white;
@@ -26,8 +32,11 @@ body{
     
 }
 
+/* .links and nav a: These are for the navbar, setting text settings, making a border, and creating a background gradient */
+
 .links{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     background-image: linear-gradient(
         rgba(107, 236, 172, 0.9) 0%,
@@ -35,6 +44,19 @@ body{
     );
     font-size: 25px;
 }
+nav a{
+    padding: 14px 20px;
+    margin: 25px;
+    display:flex;
+    flex-wrap: wrap;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-style:inset;
+    border-color:white;
+}
+
+/*nav a:hover: Sets a box shadow in and around the border of the links in the navbar when the cursor hovers over them. */
 
 nav a:hover{
     box-shadow: inset 0px 0px 8px rgb(68, 65, 119), 0 0 35px rgb(68, 65, 119);
@@ -45,27 +67,14 @@ nav a:hover{
     transition: .5s ease;
 }
 
-nav a{
-    padding: 14px 20px;
-    margin: 25px;
-    display:flex;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    border-style:inset;
-    border-color:white;
-}
-
-main{
-    display: inline-block;
-    margin-left: 20px;
-}
-
+/* section h2: Makes the headers of the different sections format to the center of the webpage. */
 
 section h2{
     display: flex;
     justify-content: center;
 }
+
+/* section p: Makes the paragraphs of the different sections format to the center of the webpage and edits the text properties. */
 
 section p{
     display: flex;
@@ -76,6 +85,9 @@ section p{
     color: rgb(68, 65, 119);
     font-weight:bold;
 }
+
+/*.about-me, .work, .contact-me, and .resume h2s: All of these set the properties for the headers of the different sections. Centering them, edititng the text
+properties, making a border, and setting a background gradient. */
 
 .about-me h2{
     display: flex;
@@ -142,11 +154,15 @@ section p{
     margin-right: 25%;
 }
 
+/* .work ul: Gets rid of the bullets in the list and aligns the Work images to the center of the webpage. */
+
 .work ul{
     list-style-type: none;
     display: flex;
     justify-content: center;
 }
+
+/* .image1-5: Sets the size for the images and adds a border to them. */
 
 .image1{
     height: 500px;
@@ -156,6 +172,9 @@ section p{
     border-style: solid;
     border-color: white;
 }
+
+/* .image1-5:hover: Sets a box shadow around the images and makes the images slightly transparent when the cursor hovers over them. */
+
 .image1:hover{
     box-shadow: inset 0px 0px 8px rgb(68, 65, 119), 0 0 35px rgb(68, 65, 119);
     top: 0;
@@ -165,7 +184,6 @@ section p{
     opacity: 0.7;
     transition: .5s ease;
 }
-
 .image2{
     height: 300px;
     width: 300px;
@@ -227,9 +245,14 @@ section p{
     transition: .5s ease;
 }
 
+/* .contact-me li: Gets rid of the bullets in the list. */
+
 .contact-me li{
     list-style-type: none;
 }
+
+/* .contact-me a: Edits the text properties of the list items in the contact me section (Email, Github). Adds a border and a background gradient. */
+
 .contact-me a{
     text-decoration: none;
     display: flex;
@@ -246,6 +269,9 @@ section p{
         rgba(107, 236, 172, 0.9) 100%
     );
 }
+
+/* .contact me a:hover: Adds a box shadow in and around the border of the links when the cursor hovers over them. */
+
 .contact-me a:hover{
     box-shadow: inset 0px 0px 8px rgb(68, 65, 119), 0 0 35px rgb(68, 65, 119);
     top: 0;
@@ -255,7 +281,20 @@ section p{
     transition: .5s ease;
 }
 
-    /*TO DO:
-    Make the webpage responsive(smaller screen size stuff)
-    Add comments to HTML and CSS.
-    */
+/* .links a and .main-header: Supposed to make the navbar stack on top of each other when the screen size shrinks. Also supposed to change the header image to 
+a gradient when the screen size shrinks. Currently does not work. */
+
+@media screen and (max-width: 768px){
+    .links a{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction:column;
+    }
+
+    .main-header{
+        background-image: linear-gradient(
+            rgba(35, 125, 141, 0.3) 0%,
+            rgba(107, 236, 172, 0.9) 100%
+        );
+    }
+}
