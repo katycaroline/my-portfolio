@@ -264,6 +264,24 @@ properties, making a border, and setting a background gradient. */
     transition: .5s ease;
 }
 
+.image7{
+    height: 500px;
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    border-color: white;
+}
+
+.image7:hover{
+    box-shadow: inset 0px 0px 8px rgb(68, 65, 119), 0 0 35px rgb(68, 65, 119);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.7;
+    transition: .5s ease;
+}
 
 /* .contact-me li: Gets rid of the bullets in the list. */
 
